@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Data Synthesis</title>
+</head>
+
+<body>
+    <h1>Generated Response for "{{type}}"</h1>
+    <p>{{message}}</p>
+
+    <form action="/data-synthesis" method="get">
+        <select name="type">
+            <option value="Good" {{#if (eq type "Good" )}}selected{{/if}}>Good</option>
+            <option value="Bad" {{#if (eq type "Bad" )}}selected{{/if}}>Bad</option>
+            <option value="Angry" {{#if (eq type "Angry" )}}selected{{/if}}>Angry</option>
+            <option value="Happy" {{#if (eq type "Happy" )}}selected{{/if}}>Happy</option>
+        </select>
+        <button type="submit">Generate</button>
+    </form>
+</body>
+
+</html>
